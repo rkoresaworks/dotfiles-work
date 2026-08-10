@@ -1,0 +1,23 @@
+# Ghostty 設定 — WezTerm (config/wezterm/wezterm.lua) と外観を揃える
+
+# --- Theme (WezTerm: Kanagawa (Wave) カスタムパレットと同一) ---
+theme = Kanagawa Wave
+# WezTerm 側の selection / cursor に合わせる (内蔵テーマは値が異なる)
+selection-background = #2d4f67
+selection-foreground = #c8c093
+# WezTerm: force_reverse_video_cursor = true
+cursor-invert-fg-bg = true
+
+# --- Font (WezTerm: Hack Nerd Font → HackGen Console NF fallback, 12pt) ---
+font-family = Hack Nerd Font
+font-family = HackGen Console NF
+font-size = 12
+
+# --- Window (WezTerm: opacity 0.85 / blur 20 / タイトルバー非表示) ---
+background-opacity = 0.85
+background-blur = 20
+macos-titlebar-style = hidden
+
+# --- Keybinds ---
+# cwd を Zed で開く (WezTerm の Leader+e 相当)
+keybind = super+e=text:zed .\x0a

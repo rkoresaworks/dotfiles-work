@@ -1,0 +1,13 @@
+# Sensitive files
+config/gh/hosts.yml
+
+# API keys and tokens
+*.key
+*.pem
+*.cert
+
+# Cache and temporary files
+*.swp
+*.swo
+*~
+.DS_Store
