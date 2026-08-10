@@ -25,6 +25,10 @@ cd ~/src/github.com/rkoresaworks/dotfiles-work
 - `config/wezterm` / `config/ghostty` — ターミナル
 - `config/mise` — ランタイムバージョン管理
 - `config/gh` — GitHub CLI（認証情報 hosts.yml は含まない）
+- `config/aerospace` / `config/borders` — ウィンドウ管理
+- `config/herdr` — エージェントマルチプレクサ
+
+Raycast はアプリのみインストール（個人用スクリプト・拡張は含まない）。
 
 ## 個人リポジトリとの関係
 

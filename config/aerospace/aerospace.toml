@@ -1,0 +1,162 @@
+# AeroSpace config
+# https://nikitabobko.github.io/AeroSpace/guide
+
+config-version = 2
+
+# 永続ワークスペース（v2 で明示指定。v1 は binding から推論していた）
+persistent-workspaces = ['1', '2', '3', '4', '5', 'H']
+
+# Start at login
+start-at-login = true
+
+# macOS アニメーション無効化（体感速度向上）
+after-startup-command = [
+    'exec-and-forget defaults write -g NSAutomaticWindowAnimationsEnabled -bool false',
+    'exec-and-forget defaults write -g NSWindowResizeTime -float 0.001',
+]
+
+# Normalizations
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Mouse follows focus
+# on-focus-changed = ['move-mouse window-lazy-center']
+
+# デフォルトレイアウト
+default-root-container-layout = 'tiles'
+
+# Gaps
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.right = 8
+outer.top = 8
+outer.bottom = 8
+
+# Main mode keybindings
+[mode.main.binding]
+# ワークスペース切替 (alt + 数字)
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-0 = 'workspace H'  # Hide workspace に visit
+
+# ウィンドウを別ワークスペースに移動 (alt + shift + 数字)
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-0 = 'move-node-to-workspace H'  # Hide workspace に明示退避
+
+# フォーカス移動 (alt + hjkl)
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# ウィンドウ移動 (alt + shift + hjkl)
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# ウィンドウ入れ替え (alt + ctrl + hjkl)
+alt-ctrl-h = 'swap left'
+alt-ctrl-j = 'swap down'
+alt-ctrl-k = 'swap up'
+alt-ctrl-l = 'swap right'
+
+# ワークスペースをモニター間移動
+alt-shift-m = 'move-workspace-to-monitor next'
+alt-shift-n = 'move-workspace-to-monitor prev'
+
+# サイズ均等化
+alt-b = 'balance-sizes'
+
+# レイアウト切替
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+alt-shift-f = 'layout floating tiling'
+alt-f = 'fullscreen'
+alt-m = 'move-node-to-workspace H'  # Hide workspace に退避
+# Hide picker は Raycast Extension (aerospace-unhide) → Raycast 側で hotkey 設定
+
+# 局所分割（隣ウィンドウと結合して中間コンテナ生成）
+# 例: alt+shift+ctrl+l → 右隣と横並びコンテナ作成
+alt-shift-ctrl-h = 'join-with left'
+alt-shift-ctrl-j = 'join-with down'
+alt-shift-ctrl-k = 'join-with up'
+alt-shift-ctrl-l = 'join-with right'
+# ツリー構造リセット
+alt-shift-b = 'flatten-workspace-tree'
+
+# リサイズモード
+alt-n = 'mode resize'
+
+# サービスモード
+alt-shift-semicolon = 'mode service'
+
+# Resize mode
+[mode.resize.binding]
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+enter = 'mode main'
+esc = 'mode main'
+
+# Service mode
+[mode.service.binding]
+r = ['reload-config', 'mode main']
+esc = 'mode main'
+
+
+# 常にフローティングにするアプリ
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.raycast.macos'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.lwouis.alt-tab-macos'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.jordanbaird.Ice'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.callpod.keepermac.lite'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.podcasts'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.jgraph.drawio.desktop'
+run = 'layout floating'
+

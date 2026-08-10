@@ -38,6 +38,12 @@ ln -sfn "$DOTFILES_DIR/config/wezterm" "$HOME/.config/wezterm"
 ln -sfn "$DOTFILES_DIR/config/ghostty" "$HOME/.config/ghostty"
 mkdir -p "$HOME/.config/gh"
 ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
+ln -sfn "$DOTFILES_DIR/config/aerospace" "$HOME/.config/aerospace"
+ln -sfn "$DOTFILES_DIR/config/borders" "$HOME/.config/borders"
+
+# herdr はログ・ソケットも ~/.config/herdr に書くため config.toml のみリンク
+mkdir -p "$HOME/.config/herdr"
+ln -sf "$DOTFILES_DIR/config/herdr/config.toml" "$HOME/.config/herdr/config.toml"
 
 # ~/.gitconfig.local のテンプレート生成 (未作成の場合のみ)
 if [ ! -f "$HOME/.gitconfig.local" ]; then

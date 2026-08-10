@@ -1,0 +1,61 @@
+onboarding = false
+# herdr configuration — WezTerm (config/wezterm) のキーバインド・テーマに寄せた設定
+# インストール先: ~/.config/herdr/config.toml (install.sh がリンク)
+
+[theme]
+# WezTerm の Kanagawa (Wave) に対応
+name = "kanagawa"
+
+[keys]
+# Ghostty で使う前提 (Ctrl+Space が素通しになる)。WezTerm 内では leader と衝突する点に注意
+prefix = "ctrl+space"
+
+# ペイン分割: WezTerm leader+d / leader+r
+split_vertical = "prefix+d"
+split_horizontal = "prefix+r"
+
+# リサイズモード: WezTerm leader+s (デフォルト prefix+r は split に譲る)
+resize_mode = "prefix+s"
+# settings のデフォルト prefix+s を resize_mode に譲る
+settings = "prefix+comma"
+
+# タブ: 新規 prefix+t (WezTerm Cmd+t は外側 WezTerm が奪うため prefix 経由)
+new_tab = "prefix+t"
+
+# ワークスペース: prefix+w (新規) / prefix+Shift+W (picker)
+new_workspace = "prefix+w"
+workspace_picker = "prefix+shift+w"
+# new_workspace デフォルト位置 prefix+shift+n を rename に充当
+rename_workspace = "prefix+shift+n"
+# ワークスペース前後移動 (vim 風。prefix+j/k は pane 移動で使用済みのため Shift 付き)
+next_workspace = "prefix+shift+j"
+previous_workspace = "prefix+shift+k"
+# ワークスペース番号ジャンプ (ワークスペース中心運用のため tab より優先)
+switch_workspace = "prefix+1..9"
+# デフォルトで prefix+1..9 の switch_tab は Shift 付きへ退避
+switch_tab = "prefix+shift+1..9"
+
+# 以下は herdr デフォルトのまま WezTerm と一致:
+#   focus_pane_left/down/up/right = prefix+h/j/k/l (WezTerm leader+hjkl)
+#   close_pane = prefix+x (WezTerm leader+x)
+#   zoom = prefix+z (WezTerm leader+z)
+#   toggle_sidebar = prefix+b (WezTerm leader+b の wez-sidebar 相当)
+
+# lazygit をテンポラリペインで開く
+# prefix+g は herdr 標準の goto (ジャンプ) に譲り、alt 付きへ
+[[keys.command]]
+key = "prefix+alt+g"
+type = "pane"
+command = "lazygit"
+
+[ui]
+# アクセントを Kanagawa の緑 (WezTerm tab_accent #98bb6c) に
+accent = "#98bb6c"
+
+agent_panel_sort = "spaces"
+[experimental]
+# 日本語 IME 利用時の使い勝手:
+# prefix モード中だけ ASCII 入力ソースへ自動切替 (かな入力中でも prefix+w 等が効く)
+switch_ascii_input_source_in_prefix = true
+# Claude Code 等 TUI で IME 候補ウィンドウの追従を改善
+reveal_hidden_cursor_for_cjk_ime = true

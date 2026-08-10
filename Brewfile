@@ -5,8 +5,10 @@ brew "fzf"
 brew "gh"
 brew "ghq"
 brew "git-delta"
+brew "herdr"
 brew "jq"
 brew "lazygit"
+brew "marp-cli"
 brew "lua"
 brew "mise"
 brew "neovim"
@@ -19,6 +21,15 @@ brew "zoxide"
 cask "font-hack-nerd-font"
 cask "font-hackgen-nerd"
 
+# Window management
+tap "FelixKratz/formulae"
+tap "nikitabobko/tap"
+brew "FelixKratz/formulae/borders"
+cask "nikitabobko/tap/aerospace"
+
 # Terminal
 cask "ghostty"
 cask "wezterm@nightly"
+
+# Apps
+cask "raycast"
