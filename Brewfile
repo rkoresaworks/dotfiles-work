@@ -29,7 +29,6 @@ cask "nikitabobko/tap/aerospace"
 
 # Terminal
 cask "ghostty"
-cask "wezterm@nightly"
 
 # Apps
 cask "raycast"

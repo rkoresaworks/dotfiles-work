@@ -34,7 +34,6 @@ ln -sf "$DOTFILES_DIR/zshenv" "$HOME/.zshenv"
 # Link .config directories
 ln -sfn "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
 ln -sf "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
-ln -sfn "$DOTFILES_DIR/config/wezterm" "$HOME/.config/wezterm"
 ln -sfn "$DOTFILES_DIR/config/ghostty" "$HOME/.config/ghostty"
 mkdir -p "$HOME/.config/gh"
 ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"

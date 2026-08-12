@@ -22,7 +22,7 @@ cd ~/src/github.com/rkoresaworks/dotfiles-work
 - `Brewfile` — CLI ツール・フォント・ターミナルのみ
 - `config/nvim` — Neovim
 - `config/starship.toml` — プロンプト
-- `config/wezterm` / `config/ghostty` — ターミナル
+- `config/ghostty` — ターミナル
 - `config/mise` — ランタイムバージョン管理
 - `config/gh` — GitHub CLI（認証情報 hosts.yml は含まない）
 - `config/aerospace` / `config/borders` — ウィンドウ管理
