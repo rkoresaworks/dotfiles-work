@@ -21,3 +21,15 @@ macos-titlebar-style = hidden
 # --- Keybinds ---
 # cwd を Zed で開く (WezTerm の Leader+e 相当)
 keybind = super+e=text:zed .\x0a
+
+# --- Herdr 連携 (prefix = ctrl+space = \x00 のシーケンスを送信) ---
+# 注意: herdr 以外のシェルでも同じバイト列が送信される
+# cmd+n: ワークスペース追加 (prefix+w)。Ghostty の新規ウィンドウは奪われる
+keybind = super+n=text:\x00w
+# cmd+w: ワークスペース削除 (prefix+shift+d)。Ghostty のウィンドウ閉じは cmd+shift+w で可能
+keybind = super+w=text:\x00D
+# cmd+t: タブ追加 (prefix+t)。Ghostty の新規タブは奪われる
+keybind = super+t=text:\x00t
+# cmd+j / cmd+k: agent 次/前 (prefix+alt+j / prefix+alt+k)
+keybind = super+j=text:\x00\x1bj
+keybind = super+k=text:\x00\x1bk
