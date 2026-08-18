@@ -6,6 +6,14 @@ onboarding = false
 # WezTerm の Kanagawa (Wave) に対応
 name = "kanagawa"
 
+[theme.custom]
+# kanagawa デフォルトは surface_dim (#1f1f28) が panel_bg と同色で
+# アクティブ行 (現在のスペース / agent) のハイライトが見えないため上書き
+# surface_dim: アクティブ行の背景 (surimiOrange #ffa066 の 35% 暗色化, 色相維持)
+surface_dim = "#593824"
+# surface0: ナビゲーション中のカーソル行背景 (surimiOrange の 50% 暗色化)
+surface0 = "#805033"
+
 [keys]
 # Ghostty で使う前提 (Ctrl+Space が素通しになる)。WezTerm 内では leader と衝突する点に注意
 prefix = "ctrl+space"
@@ -57,7 +65,8 @@ command = "lazygit"
 # アクセントを Kanagawa の緑 (WezTerm tab_accent #98bb6c) に
 accent = "#98bb6c"
 
-agent_panel_sort = "spaces"
+# priority: 対応が必要な agent (入力待ち・エラー等) を上に表示する attention queue
+agent_panel_sort = "priority"
 
 # スペース行: 2行目にブランチ + git 状態
 [ui.sidebar.spaces]

@@ -33,3 +33,6 @@ keybind = super+t=text:\x00t
 # cmd+j / cmd+k: agent 次/前 (prefix+alt+j / prefix+alt+k)
 keybind = super+j=text:\x00\x1bj
 keybind = super+k=text:\x00\x1bk
+# cmd+shift+j / cmd+shift+k: ワークスペース次/前 (prefix+shift+j / prefix+shift+k)
+keybind = super+shift+j=text:\x00J
+keybind = super+shift+k=text:\x00K
