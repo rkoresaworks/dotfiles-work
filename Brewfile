@@ -1,5 +1,6 @@
 # CLI tools
 brew "bat"
+brew "displayplacer"
 brew "fd"
 brew "fzf"
 brew "gh"
