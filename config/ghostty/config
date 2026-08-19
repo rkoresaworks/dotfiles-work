@@ -36,3 +36,6 @@ keybind = super+k=text:\x00\x1bk
 # cmd+shift+j / cmd+shift+k: ワークスペース次/前 (prefix+shift+j / prefix+shift+k)
 keybind = super+shift+j=text:\x00J
 keybind = super+shift+k=text:\x00K
+# cmd+l / cmd+h: タブ次/前 (prefix+alt+l / prefix+alt+h)。macOS の Hide (cmd+h) は奪われる
+keybind = super+l=text:\x00\x1bl
+keybind = super+h=text:\x00\x1bh

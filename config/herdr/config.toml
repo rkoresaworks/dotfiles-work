@@ -47,6 +47,9 @@ previous_workspace = "prefix+shift+k"
 switch_workspace = "prefix+1..9"
 # デフォルトで prefix+1..9 の switch_tab は Shift 付きへ退避
 switch_tab = "prefix+shift+1..9"
+# タブ前後移動 (Ghostty cmd+l / cmd+h が prefix+alt+l/h を送信)
+next_tab = "prefix+alt+l"
+previous_tab = "prefix+alt+h"
 
 # 以下は herdr デフォルトのまま WezTerm と一致:
 #   focus_pane_left/down/up/right = prefix+h/j/k/l (WezTerm leader+hjkl)
