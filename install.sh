@@ -12,6 +12,12 @@ if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Homebrew 6 以降は非公式 tap の formula/cask を trust なしでは読み込まない。
+# tap 全体ではなく aerospace の cask のみを対象にする。
+if brew trust --help &> /dev/null; then
+    brew trust --cask nikitabobko/tap/aerospace
+fi
+
 # Install dependencies from Brewfile
 echo "Installing dependencies from Brewfile..."
 brew bundle --file="$DOTFILES_DIR/Brewfile"
@@ -38,7 +44,6 @@ ln -sfn "$DOTFILES_DIR/config/ghostty" "$HOME/.config/ghostty"
 mkdir -p "$HOME/.config/gh"
 ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 ln -sfn "$DOTFILES_DIR/config/aerospace" "$HOME/.config/aerospace"
-ln -sfn "$DOTFILES_DIR/config/borders" "$HOME/.config/borders"
 
 # herdr はログ・ソケットも ~/.config/herdr に書くため config.toml のみリンク
 mkdir -p "$HOME/.config/herdr"
