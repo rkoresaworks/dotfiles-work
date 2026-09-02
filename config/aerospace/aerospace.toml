@@ -160,3 +160,6 @@ run = 'layout floating'
 if.app-id = 'com.jgraph.drawio.desktop'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = 'layout floating'
