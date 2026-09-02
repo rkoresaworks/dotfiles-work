@@ -10,9 +10,12 @@ persistent-workspaces = ['1', '2', '3', '4', '5', 'H']
 start-at-login = true
 
 # macOS アニメーション無効化（体感速度向上）
+# borders は引数なしだと ~/.config/borders/bordersrc を自分で実行する。
+# aerospace の PATH に /opt/homebrew/bin は入らないため絶対パスで指定。
 after-startup-command = [
     'exec-and-forget defaults write -g NSAutomaticWindowAnimationsEnabled -bool false',
     'exec-and-forget defaults write -g NSWindowResizeTime -float 0.001',
+    'exec-and-forget /opt/homebrew/bin/borders',
 ]
 
 # Normalizations

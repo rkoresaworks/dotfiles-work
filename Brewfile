@@ -23,7 +23,9 @@ cask "font-hack-nerd-font"
 cask "font-hackgen-nerd"
 
 # Window management
+tap "FelixKratz/formulae"
 tap "nikitabobko/tap"
+brew "FelixKratz/formulae/borders"
 cask "nikitabobko/tap/aerospace"
 
 # Terminal

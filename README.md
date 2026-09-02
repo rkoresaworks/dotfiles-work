@@ -25,7 +25,7 @@ cd ~/src/github.com/rkoresaworks/dotfiles-work
 - `config/ghostty` — ターミナル
 - `config/mise` — ランタイムバージョン管理
 - `config/gh` — GitHub CLI（認証情報 hosts.yml は含まない）
-- `config/aerospace` — ウィンドウ管理
+- `config/aerospace` / `config/borders` — ウィンドウ管理
 - `config/herdr` — エージェントマルチプレクサ
 - `claude/starter-kit.conf` — Claude Code の wizard 選択（本体は starter kit 管理。下記参照）
 
