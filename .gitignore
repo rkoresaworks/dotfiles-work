@@ -11,3 +11,9 @@ config/gh/hosts.yml
 *.swo
 *~
 .DS_Store
+
+# Raycast extension ビルド成果物・依存は Git 対象外
+config/raycast/extensions/*/node_modules/
+config/raycast/extensions/*/*.js
+config/raycast/extensions/*/*.js.map
+config/raycast/extensions/*/raycast-env.d.ts
