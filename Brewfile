@@ -22,10 +22,11 @@ brew "zoxide"
 cask "font-hack-nerd-font"
 cask "font-hackgen-nerd"
 
-# Window management
+# Window / menu bar management
 tap "FelixKratz/formulae"
 tap "nikitabobko/tap"
 brew "FelixKratz/formulae/borders"
+cask "jordanbaird-ice"
 cask "nikitabobko/tap/aerospace"
 
 # Terminal
