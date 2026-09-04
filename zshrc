@@ -185,3 +185,4 @@ bindkey '^b' git-branch-fzf
 
 # マシンローカル設定 (社内プロキシ・社内ツール PATH 等は ~/.zshrc.local へ)
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+export NODE_EXTRA_CA_CERTS=$HOME/.certs/netskope-ca.pem
